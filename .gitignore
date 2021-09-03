@@ -1,0 +1,8 @@
+.DS_Store
+xcuserdata/
+.xcworkspace/
+.firebaserc
+firebase-debug.log
+.firebase
+node_modules/**
+public/**/*.js
