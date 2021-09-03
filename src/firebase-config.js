@@ -7,7 +7,14 @@
  * 4. Copy the config object snippet, then add it here.
  */
 const config = {
-  /* TODO: ADD YOUR FIREBASE CONFIGURATION OBJECT HERE */
+  apiKey: "AIzaSyDWxyTHyQQLq2ZlnRTmZCXUjOJmO8dA-xw",
+  authDomain: "ux-codelab-demo.firebaseapp.com",
+  databaseURL: "https://ux-codelab-demo-default-rtdb.firebaseio.com",
+  projectId: "ux-codelab-demo",
+  storageBucket: "ux-codelab-demo.appspot.com",
+  messagingSenderId: "118009539228",
+  appId: "1:118009539228:web:fbb33d8037705a773f1b59",
+  measurementId: "G-PZ1GDSZNBN"
 };
 
 export function getFirebaseConfig() {
