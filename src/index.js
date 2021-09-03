@@ -114,7 +114,7 @@
        } else {
          var message = change.doc.data();
          displayMessage(change.doc.id, message.timestamp, message.name,
-                       message.text, message.profilePicUrl, message.imageUrl);
+                       message.text, message.profilePicUrl, message.imageUrl, message.translation);
        }
      });
    });
@@ -350,7 +350,7 @@
  }
  
  // Displays a Message in the UI.
- function displayMessage(id, timestamp, name, text, picUrl, imageUrl) {
+ function displayMessage(id, timestamp, name, text, picUrl, imageUrl, translation) {
    var div = document.getElementById(id) || createAndInsertMessage(id, timestamp);
  
    // profile picture
@@ -362,7 +362,8 @@
    var messageElement = div.querySelector('.message');
  
    if (text) { // If the message is text.
-     messageElement.textContent = text;
+     messageElement.innerHTML = text + "<span class='translation'>(" + translation.es + ")</span>";
+
      // Replace all line breaks by <br>.
      messageElement.innerHTML = messageElement.innerHTML.replace(/\n/g, '<br>');
    } else if (imageUrl) { // If the message is an image.
@@ -379,6 +380,7 @@
    messageListElement.scrollTop = messageListElement.scrollHeight;
    messageInputElement.focus();
  }
+
  
  // Enables or disables the submit button depending on the values of the input
  // fields.
