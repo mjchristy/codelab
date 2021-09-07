@@ -167,6 +167,13 @@ main, #messages-card {
   max-width: 300px;
   max-height: 200px;
 }
+
+.translation {
+  display: inline-block;
+  color: #999;
+  padding-left: 10px;
+}
+
 #mediaCapture {
   display: none;
 }
